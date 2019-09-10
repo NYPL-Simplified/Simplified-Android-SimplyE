@@ -95,9 +95,11 @@ For signing releases, a keystore must be copied to
 `$HOME/.gradle/gradle.properties`:
 
 ~~~
-org.librarysimplified.simplye.keyAlias=
-org.librarysimplified.simplye.keyPassword=
-org.librarysimplified.simplye.storePassword=
+# Replace KEYALIAS, KEYPASSWORD, and STOREPASSWORD appropriately.
+# Do NOT use quotes around values.
+org.librarysimplified.simplye.keyAlias=KEYALIAS
+org.librarysimplified.simplye.keyPassword=KEYPASSWORD
+org.librarysimplified.simplye.storePassword=STOREPASSWORD
 ~~~
 
 ### License

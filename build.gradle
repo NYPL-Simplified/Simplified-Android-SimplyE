@@ -45,7 +45,7 @@ ext {
     nexusPassword = ""
   }
 
-  nyplFindawayVersion = "2.0.0"
+  nyplFindawayVersion = "3.0.0-beta001"
   simplifiedVersion = "4.0.0-b000"
 }
 
@@ -54,7 +54,7 @@ ext.libraries = [
   nyplDRMAdobeProvider               : "org.nypl.drm:nypl-drm-adobe-provider:1.0.0",
   nyplDRMLibNYPLAdobe                : "org.nypl.drm:libnypl_adobe:1.0.0",
   nyplDRMLibNYPLAdobeFilter          : "org.nypl.drm:libnypl_adobe_filter:1.0.0",
-  nyplFindaway                       : "org.nypl.audiobook:org.nypl.audiobook.android.audioengine.core:${nyplFindawayVersion}",
+  nyplFindaway                       : "org.librarysimplified.audiobook.audioengine:org.librarysimplified.audiobook.audioengine.core:${nyplFindawayVersion}",
   simplifiedAccountSourceNYPLRegistry: "org.librarysimplified:org.librarysimplified.accounts.source.nyplregistry:${simplifiedVersion}",
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",
   simplifiedAppShared                : "org.librarysimplified:org.librarysimplified.app.shared:${simplifiedVersion}",

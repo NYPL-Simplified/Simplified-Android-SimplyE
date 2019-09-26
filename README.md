@@ -3,6 +3,20 @@ SimplyE
 
 The NYPL's [SimplyE](https://www.nypl.org/books-music-movies/ebookcentral/simplye) Android application.
 
+### What Is This?
+
+The contents of this repository define the _frontend_
+for the NYPL's SimplyE application. That is, the code
+in this repository uses the [Library Simplified Android
+framework](https://github.com/NYPL-Simplified/android) to produce
+the Play Store version of the SimplyE application. The contents
+of this repository, in practical terms, just define a logo, an
+application name, switch on a few feature flags, and enable a
+dependency on one or more DRM systems.
+
+If you're looking to add new features to the SimplyE application,
+you probably want the [main framework repository](https://github.com/NYPL-Simplified/android).
+
 ### Building
 
 #### Build!

@@ -60,8 +60,6 @@ android {
 
 dependencies {
   implementation libraries.nyplDRMAdobeProvider
-  implementation libraries.nyplDRMLibNYPLAdobe
-  implementation libraries.nyplDRMLibNYPLAdobeFilter
   implementation libraries.nyplFindaway
   implementation libraries.simplifiedAccountSourceNYPLRegistry
   implementation libraries.simplifiedAnalyticsCirculation

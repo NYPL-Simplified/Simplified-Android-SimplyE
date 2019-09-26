@@ -46,14 +46,12 @@ ext {
   }
 
   nyplFindawayVersion = "3.0.0-beta001"
-  simplifiedVersion = "4.0.0-b000"
+  simplifiedVersion = "4.0.0-b001"
 }
 
 ext.libraries = [
   googleAutoValue                    : "com.google.auto.value:auto-value:1.5",
-  nyplDRMAdobeProvider               : "org.nypl.drm:nypl-drm-adobe-provider:1.0.0",
-  nyplDRMLibNYPLAdobe                : "org.nypl.drm:libnypl_adobe:1.0.0",
-  nyplDRMLibNYPLAdobeFilter          : "org.nypl.drm:libnypl_adobe_filter:1.0.0",
+  nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.21",
   nyplFindaway                       : "org.librarysimplified.audiobook.audioengine:org.librarysimplified.audiobook.audioengine.core:${nyplFindawayVersion}",
   simplifiedAccountSourceNYPLRegistry: "org.librarysimplified:org.librarysimplified.accounts.source.nyplregistry:${simplifiedVersion}",
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",

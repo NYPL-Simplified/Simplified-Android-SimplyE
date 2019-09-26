@@ -53,19 +53,17 @@ git clone \
 info "installing certificate"
 
 cp -v .travis/credentials/SimplyE/Android/ReaderClientCert.sig \
-  simplified-app-simplye/src/main/assets/ReaderClientCert.sig
+  app/src/main/assets/ReaderClientCert.sig
 
 info "installing bugsnag configuration"
 
 cp -v .travis/credentials/SimplyE/Android/bugsnag.conf \
-  simplified-app-simplye/src/main/assets/bugsnag.conf
+  app/src/main/assets/bugsnag.conf
 
 info "installing keystore"
 
 cp -v ".travis/credentials/APK Signing/nypl-keystore.jks" \
-  simplified-app-vanilla/keystore.jks
-cp -v ".travis/credentials/APK Signing/nypl-keystore.jks" \
-  simplified-app-vanilla-with-profiles/keystore.jks
+  app/keystore.jks
 
 #------------------------------------------------------------------------
 # Clone binaries repos

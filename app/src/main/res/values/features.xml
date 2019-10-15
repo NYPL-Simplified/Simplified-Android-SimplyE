@@ -15,4 +15,7 @@
   <!-- The default email address used for migration reports. -->
   <string name="feature_migration_report_email">simplyemigrationreports@nypl.org</string>
 
+  <!-- Enable extra DRM logging. -->
+  <bool name="debug_adobe_drm_logging">true</bool>
+
 </resources>

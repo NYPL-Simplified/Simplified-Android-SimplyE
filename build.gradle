@@ -51,7 +51,8 @@ ext {
 
 ext.libraries = [
   googleAutoValue                    : "com.google.auto.value:auto-value:1.5",
-  nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.26",
+  nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.27",
+  nyplDRMCore                        : "org.librarysimplified.drm:org.librarysimplified.drm.core:1.1.2",
   nyplFindaway                       : "org.librarysimplified.audiobook.audioengine:org.librarysimplified.audiobook.audioengine.core:${nyplFindawayVersion}",
   simplifiedAccountSourceNYPLRegistry: "org.librarysimplified:org.librarysimplified.accounts.source.nyplregistry:${simplifiedVersion}",
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",

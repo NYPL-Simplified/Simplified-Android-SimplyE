@@ -60,6 +60,11 @@ info "installing bugsnag configuration"
 cp -v .travis/credentials/SimplyE/Android/bugsnag.conf \
   app/src/main/assets/bugsnag.conf
 
+info "installing cardcreator configuration"
+
+cp -v .travis/credentials/SimplyE/Android/cardcreator.conf \
+  app/src/main/assets/cardcreator.conf
+
 info "installing keystore"
 
 cp -v ".travis/credentials/APK Signing/nypl-keystore.jks" \

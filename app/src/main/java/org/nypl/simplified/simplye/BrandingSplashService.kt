@@ -1,6 +1,6 @@
 package org.nypl.simplified.simplye
 
-import org.nypl.simplified.branding.BrandingSplashServiceType
+import org.nypl.simplified.ui.branding.BrandingSplashServiceType
 
 /**
  * A splash service for the SimplyE app.

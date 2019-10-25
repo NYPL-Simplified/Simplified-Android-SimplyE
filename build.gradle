@@ -46,7 +46,7 @@ ext {
   }
 
   nyplFindawayVersion = "3.0.2-beta005"
-  simplifiedVersion = "4.0.0"
+  simplifiedVersion = "4.1.0-SNAPSHOT"
 }
 
 ext.libraries = [
@@ -270,6 +270,10 @@ Automatic-Module-Name: ${POM_AUTOMATIC_MODULE_NAME}
   repositories {
     mavenLocal()
     mavenCentral()
+
+    maven {
+      url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
 
     maven {
       credentials {

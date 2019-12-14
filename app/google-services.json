@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "767660772222",
+    "firebase_url": "https://simplye-experimental.firebaseio.com",
+    "project_id": "simplye-experimental",
+    "storage_bucket": "simplye-experimental.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767660772222:android:1b6b8fbbe8e60091a7012f",
+        "android_client_info": {
+          "package_name": "org.nypl.simplified.simplye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "767660772222-gubn0j4j3tgqc8qnl8mqk5bqr9oa7o7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0TXYDQfv6aA9dC01t51nSbLWOBHdx9Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "767660772222-gubn0j4j3tgqc8qnl8mqk5bqr9oa7o7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

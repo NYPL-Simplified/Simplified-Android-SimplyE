@@ -116,6 +116,12 @@ org.librarysimplified.simplye.keyPassword=KEYPASSWORD
 org.librarysimplified.simplye.storePassword=STOREPASSWORD
 ~~~
 
+#### QA
+#### Builds project, uploads QA build to Firebase Crashlyitcs beta
+1. Setup the FIREBASE_CLI_PATH, environment variable on your machine  
+2. Ensure that you have read/write access for the project with: `sudo chown -R yourusername .`  
+3. `sudo fastlane android qa release_notes:"Type release notes here"`  
+
 ### License
 
 ~~~

@@ -47,7 +47,7 @@ ext {
   }
 
   nyplFindawayVersion = "3.0.2-beta005"
-  simplifiedVersion = "4.1.0-SNAPSHOT"
+  simplifiedVersion = "4.1.1"
 }
 
 ext.libraries = [

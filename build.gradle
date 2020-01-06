@@ -46,7 +46,7 @@ ext {
   }
 
   nyplFindawayVersion = "3.0.2-beta005"
-  simplifiedVersion = "4.1.0-SNAPSHOT"
+  simplifiedVersion = "5.0.0-SNAPSHOT"
 }
 
 ext.libraries = [
@@ -56,7 +56,7 @@ ext.libraries = [
   nyplFindaway                       : "org.librarysimplified.audiobook.audioengine:org.librarysimplified.audiobook.audioengine.core:${nyplFindawayVersion}",
   simplifiedAccountSourceNYPLRegistry: "org.librarysimplified:org.librarysimplified.accounts.source.nyplregistry:${simplifiedVersion}",
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",
-  simplifiedAppShared                : "org.librarysimplified:org.librarysimplified.app.shared:${simplifiedVersion}",
+  simplifiedMain                     : "org.librarysimplified:org.librarysimplified.main:${simplifiedVersion}",
   simplifiedMigrationFrom3Master     : "org.librarysimplified:org.librarysimplified.migration.from3master:${simplifiedVersion}",
 ]
 

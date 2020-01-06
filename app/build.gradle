@@ -71,7 +71,7 @@ dependencies {
   implementation libraries.nyplFindaway
   implementation libraries.simplifiedAccountSourceNYPLRegistry
   implementation libraries.simplifiedAnalyticsCirculation
-  implementation libraries.simplifiedAppShared
+  implementation libraries.simplifiedMain
   implementation libraries.simplifiedMigrationFrom3Master
 
   annotationProcessor libraries.googleAutoValue

@@ -18,7 +18,7 @@
 # Certificates and API Keys
 #
 ReaderClientCert.sig
-bugsnag.conf
+google-services.json
 *.jks
 cardcreator.conf
 

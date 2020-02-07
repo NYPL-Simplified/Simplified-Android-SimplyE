@@ -103,4 +103,13 @@ certificate file at ${project.rootDir}/app/src/main/assets/ReaderClientCert.sig.
 Obtain it from the private NYPL credentials repository.
 """)
   }
+
+  if (!file("${project.rootDir}/app/google-services.json").exists()) {
+    throw new IllegalStateException("""
+You have not added the required google-services.json file at 
+${project.rootDir}/app/google-services.json that is needed for Crashlytics.
+
+Obtain it from the private NYPL credentials repository.
+""")
+    }
 }

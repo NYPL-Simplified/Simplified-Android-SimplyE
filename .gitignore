@@ -20,6 +20,7 @@
 ReaderClientCert.sig
 *.jks
 cardcreator.conf
+google-services.json
 
 # backup files
 *~

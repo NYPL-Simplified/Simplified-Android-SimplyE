@@ -21,7 +21,7 @@ you probably want the [main framework repository](https://github.com/NYPL-Simpli
 
 #### Build!
 
-The short version: Install an [Android SDK](#android-sdk), configure
+The short version: Install an [Android SDK](#android-sdk), configure Crashlytics, configure
 [credentials for Nexus](#credentials), add an [Adobe DRM certificate](#adobe-drm), add a
 [keystore](#apk-signing) and run:
 
@@ -63,6 +63,11 @@ openjdk version "1.8.0_222"
 OpenJDK Runtime Environment (build 1.8.0_222-b05)
 OpenJDK 64-Bit Server VM (build 25.222-b05, mixed mode)
 ~~~
+
+#### Crashlytics
+
+SimplyE uses Crashlytics for crash reporting. Obtain `google-services.json` and 
+place it in the `app` directory.
 
 #### Credentials
 

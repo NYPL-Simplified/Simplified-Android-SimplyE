@@ -63,6 +63,10 @@ android {
   lintOptions {
     checkReleaseBuilds false
   }
+
+  dexOptions {
+    javaMaxHeapSize "4g"
+  }
 }
 
 dependencies {
@@ -73,6 +77,7 @@ dependencies {
   implementation libraries.simplifiedAnalyticsCirculation
   implementation libraries.simplifiedMain
   implementation libraries.simplifiedMigrationFrom3Master
+  implementation libraries.firebaseAnalytics
 
   annotationProcessor libraries.googleAutoValue
 }
@@ -94,15 +99,6 @@ Obtain it from the private NYPL credentials repository.
     throw new IllegalStateException("""
 You are attempting to build with Adobe DRM but have not added the required
 certificate file at ${project.rootDir}/app/src/main/assets/ReaderClientCert.sig.
-
-Obtain it from the private NYPL credentials repository.
-""")
-  }
-
-  if (!file("${project.rootDir}/app/src/main/assets/bugsnag.conf").exists()) {
-    throw new IllegalStateException("""
-You are attempting to build with Bugsnag but have not added the required
-configuration file at ${project.rootDir}/app/src/main/assets/bugsnag.conf.
 
 Obtain it from the private NYPL credentials repository.
 """)

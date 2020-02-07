@@ -22,8 +22,7 @@ you probably want the [main framework repository](https://github.com/NYPL-Simpli
 #### Build!
 
 The short version: Install an [Android SDK](#android-sdk), configure
-[credentials for Nexus](#credentials), add a [Bugsnag](#bugsnag)
-API token, add an [Adobe DRM certificate](#adobe-drm), add a
+[credentials for Nexus](#credentials), add an [Adobe DRM certificate](#adobe-drm), add a
 [keystore](#apk-signing) and run:
 
 ~~~
@@ -83,18 +82,6 @@ Once you have your credentials, the following lines must be added to `$HOME/.gra
 # Do NOT use quotes around either value.
 org.librarysimplified.nexus.username=USERNAME
 org.librarysimplified.nexus.password=PASSWORD
-~~~
-
-#### Bugsnag Support
-
-The project currently builds a version of the
-SimplyE application that supports error reporting via
-[Bugsnag](https://www.bugsnag.com/). This requires that a configuration
-file be placed at `app/src/main/assets/bugsnag.conf`
-containing your Bugsnag API token:
-
-~~~
-bugsnag.api_token = 1234123412341234
 ~~~
 
 #### Adobe DRM

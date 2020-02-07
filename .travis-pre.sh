@@ -55,11 +55,6 @@ info "installing certificate"
 cp -v .travis/credentials/SimplyE/Android/ReaderClientCert.sig \
   app/src/main/assets/ReaderClientCert.sig
 
-info "installing bugsnag configuration"
-
-cp -v .travis/credentials/SimplyE/Android/bugsnag.conf \
-  app/src/main/assets/bugsnag.conf
-
 info "installing cardcreator configuration"
 
 cp -v .travis/credentials/SimplyE/Android/cardcreator.conf \

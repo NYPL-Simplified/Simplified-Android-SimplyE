@@ -54,6 +54,11 @@ info "installing certificate"
 
 cp -v .travis/credentials/SimplyE/Android/ReaderClientCert.sig \
   app/src/main/assets/ReaderClientCert.sig
+  
+info "installing crashlytics configuration"
+
+cp -v .travis/credentials/SimplyE/Android/google-services.json \
+   app/google-services.json
 
 info "installing cardcreator configuration"
 

@@ -70,6 +70,11 @@ info "installing keystore"
 cp -v ".travis/credentials/APK Signing/nypl-keystore.jks" \
   app/keystore.jks
 
+info "installing feedbooks.conf"
+
+cp -v ".travis/credentials/Feedbooks/feedbookls.conf" \
+  app/src/main/resources/org/nypl/simplified/simplye/feedbooks.conf
+
 #------------------------------------------------------------------------
 # Clone binaries repos
 

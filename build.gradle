@@ -46,8 +46,8 @@ ext {
     nexusPassword = ""
   }
 
-  nyplFindawayVersion = "3.0.2-beta005"
-  simplifiedVersion = "5.0.0-SNAPSHOT"
+  nyplFindawayVersion = "4.0.0"
+  simplifiedVersion = "5.0.2"
   firebaseVersion = "17.2.2"
 }
 
@@ -68,7 +68,7 @@ apply plugin: "com.vanniktech.android.junit.jacoco"
 
 nexusStaging {
   packageGroup = "org.librarysimplified"
-  numberOfRetries = 32
+  numberOfRetries = 256
   delayBetweenRetriesInMillis = 2000
 }
 

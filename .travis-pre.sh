@@ -53,22 +53,27 @@ git clone \
 info "installing certificate"
 
 cp -v .travis/credentials/SimplyE/Android/ReaderClientCert.sig \
-  app/src/main/assets/ReaderClientCert.sig
-  
+  app/src/main/assets/ReaderClientCert.sig || exit 1
+
 info "installing crashlytics configuration"
 
 cp -v .travis/credentials/SimplyE/Android/google-services.json \
-   app/google-services.json
+   app/google-services.json || exit 1
 
 info "installing cardcreator configuration"
 
 cp -v .travis/credentials/SimplyE/Android/cardcreator.conf \
-  app/src/main/assets/cardcreator.conf
+  app/src/main/assets/cardcreator.conf || exit 1
 
 info "installing keystore"
 
 cp -v ".travis/credentials/APK Signing/nypl-keystore.jks" \
-  app/keystore.jks
+  app/keystore.jks || exit 1
+
+info "installing feedbooks.conf"
+
+cp -v ".travis/credentials/Feedbooks/feedbooks.conf" \
+  app/src/main/resources/org/nypl/simplified/simplye/feedbooks.conf || exit 1
 
 #------------------------------------------------------------------------
 # Clone binaries repos

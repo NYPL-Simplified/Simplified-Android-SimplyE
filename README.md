@@ -31,6 +31,8 @@ $ ./gradlew clean assemble test
 
 Please read the list of instructions below for specific details on configurations.
 
+> Note: If your build fails due to `java.lang.OutOfMemoryError` try running the build with the `--no-parallel --no-daemon` flags set. 
+
 #### Android SDK
 
 Install the [Android SDK and Android Studio](https://developer.android.com/studio/). We don't

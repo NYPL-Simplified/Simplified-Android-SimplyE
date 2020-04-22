@@ -19,6 +19,7 @@ buildscript {
     classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.21.2"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath 'com.android.tools.build:gradle:3.6.2'
+    classpath 'com.google.gms:google-services:4.3.3'
   }
 }
 
@@ -47,6 +48,7 @@ ext {
 
   nyplFindawayVersion = "4.0.0"
   simplifiedVersion = "5.0.2-SNAPSHOT"
+  firebaseVersion = "17.2.2"
 }
 
 ext.libraries = [
@@ -58,6 +60,7 @@ ext.libraries = [
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",
   simplifiedMain                     : "org.librarysimplified:org.librarysimplified.main:${simplifiedVersion}",
   simplifiedMigrationFrom3Master     : "org.librarysimplified:org.librarysimplified.migration.from3master:${simplifiedVersion}",
+  firebaseAnalytics                  : "com.google.firebase:firebase-analytics:${firebaseVersion}",
 ]
 
 apply plugin: "io.codearte.nexus-staging"
@@ -115,6 +118,7 @@ Automatic-Module-Name: ${POM_AUTOMATIC_MODULE_NAME}
 
       apply plugin: "com.android.application"
       apply plugin: "kotlin-android"
+      apply plugin: 'com.google.gms.google-services'
 
       android {
         compileSdkVersion androidCompileSDKVersion
@@ -270,6 +274,7 @@ Automatic-Module-Name: ${POM_AUTOMATIC_MODULE_NAME}
   repositories {
     mavenLocal()
     mavenCentral()
+    google()
 
     maven {
       url "https://oss.sonatype.org/content/repositories/snapshots/"

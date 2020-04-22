@@ -73,6 +73,7 @@ dependencies {
   implementation libraries.simplifiedAnalyticsCirculation
   implementation libraries.simplifiedMain
   implementation libraries.simplifiedMigrationFrom3Master
+  implementation libraries.firebaseAnalytics
 
   annotationProcessor libraries.googleAutoValue
 }
@@ -99,10 +100,10 @@ Obtain it from the private NYPL credentials repository.
 """)
   }
 
-  if (!file("${project.rootDir}/app/src/main/assets/bugsnag.conf").exists()) {
+  if (!file("${project.rootDir}/app/google-services.json").exists()) {
     throw new IllegalStateException("""
-You are attempting to build with Bugsnag but have not added the required
-configuration file at ${project.rootDir}/app/src/main/assets/bugsnag.conf.
+You have not added the required google-services.json file at 
+${project.rootDir}/app/google-services.json that is needed for Crashlytics.
 
 Obtain it from the private NYPL credentials repository.
 """)

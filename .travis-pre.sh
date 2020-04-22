@@ -55,10 +55,10 @@ info "installing certificate"
 cp -v .travis/credentials/SimplyE/Android/ReaderClientCert.sig \
   app/src/main/assets/ReaderClientCert.sig || exit 1
 
-info "installing bugsnag configuration"
+info "installing crashlytics configuration"
 
-cp -v .travis/credentials/SimplyE/Android/bugsnag.conf \
-  app/src/main/assets/bugsnag.conf || exit 1
+cp -v .travis/credentials/SimplyE/Android/google-services.json \
+   app/google-services.json || exit 1
 
 info "installing cardcreator configuration"
 

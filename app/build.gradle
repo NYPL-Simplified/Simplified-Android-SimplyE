@@ -73,6 +73,7 @@ dependencies {
   implementation libraries.simplifiedAnalyticsCirculation
   implementation libraries.simplifiedMain
   implementation libraries.simplifiedMigrationFrom3Master
+  implementation libraries.instabug
 
   annotationProcessor libraries.googleAutoValue
 }

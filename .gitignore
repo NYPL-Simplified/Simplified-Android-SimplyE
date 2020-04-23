@@ -19,8 +19,10 @@
 #
 ReaderClientCert.sig
 google-services.json
-*.jks
 cardcreator.conf
+instabug.conf
+bugsnag.conf
+*.jks
 
 # backup files
 *~

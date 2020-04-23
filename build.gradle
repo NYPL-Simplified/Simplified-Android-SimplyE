@@ -18,7 +18,7 @@ buildscript {
     classpath "digital.wup:android-maven-publish:3.6.3"
     classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.21.2"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    classpath 'com.android.tools.build:gradle:3.6.2'
+    classpath 'com.android.tools.build:gradle:3.6.3'
     classpath 'com.google.gms:google-services:4.3.3'
   }
 }
@@ -33,9 +33,9 @@ plugins {
 
 ext {
   androidBuildToolsVersion = "28.0.3"
-  androidCompileSDKVersion = 28
+  androidCompileSDKVersion = 29
   androidMinimumSDKVersion = 21
-  androidTargetSDKVersion = 28
+  androidTargetSDKVersion = 29
 
   if (!project.hasProperty("nexusUsername")) {
     logger.warn("No nexusUsername property specified: Using an empty value")
@@ -47,12 +47,13 @@ ext {
   }
 
   nyplFindawayVersion = "4.0.0"
-  simplifiedVersion = "5.0.2-SNAPSHOT"
+  simplifiedVersion = "5.1.0-SNAPSHOT"
   firebaseVersion = "17.2.2"
 }
 
 ext.libraries = [
   googleAutoValue                    : "com.google.auto.value:auto-value:1.5",
+  instabug                           : "com.instabug.library:instabug:9.1.3",
   nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.27",
   nyplDRMCore                        : "org.librarysimplified.drm:org.librarysimplified.drm.core:1.1.2",
   nyplFindaway                       : "org.librarysimplified.audiobook.audioengine:org.librarysimplified.audiobook.audioengine.core:${nyplFindawayVersion}",

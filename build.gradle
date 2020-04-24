@@ -20,6 +20,7 @@ buildscript {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath 'com.android.tools.build:gradle:3.6.3'
     classpath 'com.google.gms:google-services:4.3.3'
+    classpath 'com.google.firebase:firebase-crashlytics-gradle:2.0.0-beta04'
   }
 }
 
@@ -62,6 +63,7 @@ ext.libraries = [
   simplifiedMain                     : "org.librarysimplified:org.librarysimplified.main:${simplifiedVersion}",
   simplifiedMigrationFrom3Master     : "org.librarysimplified:org.librarysimplified.migration.from3master:${simplifiedVersion}",
   firebaseAnalytics                  : "com.google.firebase:firebase-analytics:${firebaseVersion}",
+  firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.0.0-beta04",
 ]
 
 apply plugin: "io.codearte.nexus-staging"
@@ -76,6 +78,9 @@ nexusStaging {
 allprojects {
   group = project.ext["GROUP"]
   version = project.ext["VERSION_NAME"]
+  repositories {
+    google()
+  }
 }
 
 subprojects { project ->
@@ -120,6 +125,7 @@ Automatic-Module-Name: ${POM_AUTOMATIC_MODULE_NAME}
       apply plugin: "com.android.application"
       apply plugin: "kotlin-android"
       apply plugin: 'com.google.gms.google-services'
+      apply plugin: 'com.google.firebase.crashlytics'
 
       android {
         compileSdkVersion androidCompileSDKVersion

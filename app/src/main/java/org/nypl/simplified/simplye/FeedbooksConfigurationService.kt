@@ -2,7 +2,7 @@ package org.nypl.simplified.simplye
 
 import android.util.Base64
 import org.librarysimplified.audiobook.feedbooks.FeedbooksPlayerExtensionConfiguration
-import org.nypl.simplified.viewer.audiobook.AudioBookFeedbooksServiceType
+import org.nypl.simplified.books.audio.AudioBookFeedbooksSecretServiceType
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.util.Properties
@@ -13,7 +13,7 @@ import java.util.Properties
  * Note: This class _MUST_ have a public no-argument constructor for use in [java.util.ServiceLoader].
  */
 
-class FeedbooksConfigurationService : AudioBookFeedbooksServiceType {
+class FeedbooksConfigurationService : AudioBookFeedbooksSecretServiceType {
 
   private val logger =
     LoggerFactory.getLogger(FeedbooksConfigurationService::class.java)

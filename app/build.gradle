@@ -75,6 +75,7 @@ dependencies {
   implementation libraries.simplifiedMigrationFrom3Master
   implementation libraries.instabug
   implementation libraries.firebaseAnalytics
+  implementation libraries.firebaseCrashlytics
 
   annotationProcessor libraries.googleAutoValue
 }

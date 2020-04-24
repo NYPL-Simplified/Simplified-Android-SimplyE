@@ -101,6 +101,34 @@ allprojects {
   version = project.ext["VERSION_NAME"]
 }
 
+task preFlightChecks {
+  logger.info("running pre-flight checks")
+
+  def requiredFiles = [
+    "app/google-services.json",
+    "app/keystore.jks",
+    "app/src/main/assets/cardcreator.conf",
+    "app/src/main/assets/ReaderClientCert.sig",
+    "app/src/main/resources/org/nypl/simplified/simplye/feedbooks.conf",
+  ]
+
+  def missingFiles = []
+  for (requiredFile in requiredFiles) {
+    logger.info("Checking ${requiredFile} exists")
+
+    try {
+      file(requiredFile).getText()
+    } catch (Exception e) {
+      logger.error("ERROR: Could not open required file ${requiredFile}: ${e.getClass()}: ${e.getMessage()}")
+      missingFiles.add(requiredFile)
+    }
+  }
+
+  if (!missingFiles.isEmpty()) {
+    throw new FileNotFoundException("One or more required files are missing")
+  }
+}
+
 subprojects { project ->
 
   switch (POM_PACKAGING) {

@@ -48,11 +48,33 @@ ext {
   }
 
   nyplFindawayVersion = "4.0.0"
-  simplifiedVersion = "5.1.0-SNAPSHOT"
+  simplifiedVersion = "5.1.0"
   firebaseVersion = "17.2.2"
 }
 
+subprojects {
+  // Force version 1.0.2 of appcompat. A bug in 1.1.0 causes a crash on API 21.
+  //
+  // https://issuetracker.google.com/issues/141132133#comment42
+  //
+  // TODO: Remove once appcompat:1.2.0 is available.
+  configurations.all {
+    resolutionStrategy.force 'androidx.appcompat:appcompat:1.0.2'
+  }
+
+  //
+  // We currently have transitive dependencies that specify dependencies on newer versions
+  // of SLF4J. These are subtly incompatible with Logback-Android, and it will be a while before
+  // new versions appear of both artifacts. Remove this when both are updated!
+  //
+  configurations.all {
+    resolutionStrategy.force libraries.slf4j
+  }
+}
+
 ext.libraries = [
+        firebaseAnalytics                  : "com.google.firebase:firebase-analytics:${firebaseVersion}",
+        firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.0.0-beta04",
   googleAutoValue                    : "com.google.auto.value:auto-value:1.5",
   instabug                           : "com.instabug.library:instabug:9.1.3",
   nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.27",
@@ -62,8 +84,7 @@ ext.libraries = [
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",
   simplifiedMain                     : "org.librarysimplified:org.librarysimplified.main:${simplifiedVersion}",
   simplifiedMigrationFrom3Master     : "org.librarysimplified:org.librarysimplified.migration.from3master:${simplifiedVersion}",
-  firebaseAnalytics                  : "com.google.firebase:firebase-analytics:${firebaseVersion}",
-  firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.0.0-beta04",
+  slf4j                              : "org.slf4j:slf4j-api:1.7.25",
 ]
 
 apply plugin: "io.codearte.nexus-staging"
@@ -78,9 +99,6 @@ nexusStaging {
 allprojects {
   group = project.ext["GROUP"]
   version = project.ext["VERSION_NAME"]
-  repositories {
-    google()
-  }
 }
 
 subprojects { project ->

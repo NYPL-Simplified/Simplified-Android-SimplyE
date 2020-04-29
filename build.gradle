@@ -199,7 +199,6 @@ Automatic-Module-Name: ${POM_AUTOMATIC_MODULE_NAME}
         buildToolsVersion androidBuildToolsVersion
 
         defaultConfig {
-          multiDexEnabled true
           minSdkVersion androidMinimumSDKVersion
           targetSdkVersion androidTargetSDKVersion
           testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

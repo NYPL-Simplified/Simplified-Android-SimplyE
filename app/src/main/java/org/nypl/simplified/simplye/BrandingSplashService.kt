@@ -10,4 +10,7 @@ class BrandingSplashService : BrandingSplashServiceType {
   override fun splashImageResource(): Int {
     return R.drawable.simplified_splash
   }
+  override fun splashImageTitleResource(): Int {
+    return R.drawable.simplified_splash_title
+  }
 }

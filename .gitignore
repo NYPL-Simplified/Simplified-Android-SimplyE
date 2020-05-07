@@ -17,12 +17,13 @@
 #
 # Certificates and API Keys
 #
-ReaderClientCert.sig
-google-services.json
-cardcreator.conf
-instabug.conf
-bugsnag.conf
 *.jks
+bugsnag.conf
+cardcreator.conf
+google-services.json
+instabug.conf
+overdrive.json
+ReaderClientCert.sig
 
 # backup files
 *~

@@ -65,16 +65,17 @@ android {
 }
 
 dependencies {
+  implementation libraries.firebaseAnalytics
+  implementation libraries.firebaseCrashlytics
+  implementation libraries.instabug
   implementation libraries.nyplDRMAdobeProvider
   implementation libraries.nyplDRMCore
   implementation libraries.nyplFindaway
   implementation libraries.simplifiedAccountSourceNYPLRegistry
   implementation libraries.simplifiedAnalyticsCirculation
+  implementation libraries.simplifiedAudioBooksOverdrive
   implementation libraries.simplifiedMain
   implementation libraries.simplifiedMigrationFrom3Master
-  implementation libraries.instabug
-  implementation libraries.firebaseAnalytics
-  implementation libraries.firebaseCrashlytics
 
   annotationProcessor libraries.googleAutoValue
 }

@@ -21,8 +21,8 @@ you probably want the [main framework repository](https://github.com/NYPL-Simpli
 
 #### Build!
 
-The short version: Install an [Android SDK](#android-sdk), configure Crashlytics, configure
-[credentials for Nexus](#credentials), add an [Adobe DRM certificate](#adobe-drm), add a
+The short version: Install an [Android SDK](#android-sdk), configure
+[credentials for Nexus](#credentials), add [the required configuration files](#configuration-files), add a
 [keystore](#apk-signing) and run:
 
 ~~~
@@ -64,10 +64,20 @@ OpenJDK Runtime Environment (build 1.8.0_222-b05)
 OpenJDK 64-Bit Server VM (build 25.222-b05, mixed mode)
 ~~~
 
-#### Crashlytics
+#### Configuration Files
 
-SimplyE uses Crashlytics for crash reporting. Obtain `google-services.json` and 
-place it in the `app` directory.
+The application requires a range of configuration files for the various
+services. All of these are available in the private NYPL Certificates
+repository.
+
+|Source|Copy To|Description|
+|------|-------|-----------|
+|[google-services.json](https://github.com/NYPL-Simplified/Certificates/blob/master/SimplyE/Android/google-services.json)|`app/google-services.json`|Crashlytics service configuration|
+|[keystore.jks](https://github.com/NYPL-Simplified/Certificates/blob/master/APK%20Signing/nypl-keystore.jks)|`app/keystore.jks`|NYPL APK signing keystore|
+|[cardcreator.conf](https://github.com/NYPL-Simplified/Certificates/blob/master/SimplyE/Android/cardcreator.conf)|`app/src/main/assets/cardcreator.conf`|NYPL card creator configuration|
+|[overdrive.json](https://github.com/NYPL-Simplified/Certificates/blob/master/Overdrive/audiobook_fulfillment.json)|`app/src/main/assets/overdrive.json`|Overdrive audio books configuration file|
+|[ReaderClientCert.sig](https://github.com/NYPL-Simplified/Certificates/blob/master/SimplyE/Android/ReaderClientCert.sig)|`app/src/main/assets/ReaderClientCert.sig`|Adobe DRM certificate|
+|[feedbooks.conf](https://github.com/NYPL-Simplified/Certificates/blob/master/Feedbooks/feedbooks.conf)|`app/src/main/resources/org/nypl/simplified/simplye/feedbooks.conf`|Feedbooks audio books configuration file|
 
 #### Credentials
 
@@ -89,11 +99,6 @@ org.librarysimplified.nexus.username=USERNAME
 org.librarysimplified.nexus.password=PASSWORD
 ~~~
 
-#### Adobe DRM
-
-The project currently supports Adobe DRM, and an appropriate `ReaderClientCert.sig`
-file must be placed at `app/src/main/assets/ReaderClientCert.sig`.
-
 #### APK signing
 
 For signing releases, a keystore must be copied to
@@ -107,6 +112,9 @@ org.librarysimplified.simplye.keyAlias=KEYALIAS
 org.librarysimplified.simplye.keyPassword=KEYPASSWORD
 org.librarysimplified.simplye.storePassword=STOREPASSWORD
 ~~~
+
+See the [nypl-keystore.properties](https://github.com/NYPL-Simplified/Certificates/blob/master/APK%20Signing/nypl-keystore.properties) file
+for the correct values.
 
 ### License
 

@@ -116,6 +116,11 @@ org.librarysimplified.simplye.storePassword=STOREPASSWORD
 See the [nypl-keystore.properties](https://github.com/NYPL-Simplified/Certificates/blob/master/APK%20Signing/nypl-keystore.properties) file
 for the correct values.
 
+### Distributing QA Builds
+#### Cleans & builds project, uploads QA build to Firebase App Distribution
+1. Setup the FIREBASE_CLI_PATH, environment variable on your machine  
+2. `fastlane android qa release_notes:"Type release notes here"`  
+
 ### License
 
 ~~~

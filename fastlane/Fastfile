@@ -1,0 +1,35 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+    desc "Submit a new beta build to Firebase Beta"
+    lane :qa do |options|
+      release_notes = options[:release_notes] ? "#{options[:release_notes]}" : nil
+
+      if not release_notes
+        UI.user_error! "'release_notes' param must be supplied"
+        next
+      end
+      gradle(task: "clean")
+      gradle(task: "assembleRelease")
+       firebase_app_distribution(
+         app: "1:220408294534:android:594dde26dd9d35c301f507",
+         groups: "librarysimplified",
+         release_notes: "#{release_notes}",
+         firebase_cli_path: ENV["FIREBASE_CLI_PATH"])
+    end
+end

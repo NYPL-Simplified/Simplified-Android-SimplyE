@@ -75,6 +75,11 @@ info "installing feedbooks.conf"
 cp -v ".travis/credentials/Feedbooks/feedbooks.conf" \
   app/src/main/resources/org/nypl/simplified/simplye/feedbooks.conf || exit 1
 
+info "installing overdrive.conf"
+
+cp -v ".travis/credentials/Overdrive/audiobook_fulfillment.json" \
+  app/src/main/assets/overdrive.json || exit 1
+
 #------------------------------------------------------------------------
 # Clone binaries repos
 

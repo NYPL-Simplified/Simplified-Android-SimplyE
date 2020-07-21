@@ -21,6 +21,7 @@ class SimplyEAccountFallback : AccountProviderFallbackType {
       authentication = AccountProviderAuthenticationDescription.COPPAAgeGate(
       greaterEqual13 = URI.create("https://circulation.librarysimplified.org/CLASSICS/groups/1831"),
       under13 = URI.create("https://circulation.librarysimplified.org/CLASSICS/groups/1832")),
+      authenticationAlternatives = listOf(),
       cardCreatorURI = null,
       catalogURI = URI.create("https://circulation.librarysimplified.org/CLASSICS/groups/1832"),
       displayName = "The SimplyE Collection",

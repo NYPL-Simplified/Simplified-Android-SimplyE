@@ -47,8 +47,8 @@ ext {
     nexusPassword = ""
   }
 
-  nyplFindawayVersion = "5.0.0-beta0006"
-  simplifiedVersion = "5.3.0"
+  nyplFindawayVersion = "5.0.0"
+  simplifiedVersion = "5.4.2"
   firebaseVersion = "17.2.2"
 }
 
@@ -84,7 +84,7 @@ ext.libraries = [
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",
   simplifiedMain                     : "org.librarysimplified:org.librarysimplified.main:${simplifiedVersion}",
   simplifiedMigrationFrom3Master     : "org.librarysimplified:org.librarysimplified.migration.from3master:${simplifiedVersion}",
-  simplifiedAudioBooksOverdrive      : "org.librarysimplified.audiobook.overdrive:org.librarysimplified.audiobook.overdrive.main:1.0.0-beta0008",
+  simplifiedAudioBooksOverdrive      : "org.librarysimplified.audiobook.overdrive:org.librarysimplified.audiobook.overdrive.main:1.0.0",
   slf4j                              : "org.slf4j:slf4j-api:1.7.25",
 ]
 

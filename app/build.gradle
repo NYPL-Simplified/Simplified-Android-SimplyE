@@ -17,8 +17,6 @@ def versionValue() {
 }
 
 android {
-  def versionCode = versionValue()
-
   packagingOptions {
     exclude "META-INF/LICENSE"
 
@@ -52,6 +50,8 @@ android {
   }
 
   defaultConfig {
+    versionCode = versionValue()
+    versionName = version
     setProperty("archivesBaseName", "simplye-${version}-${versionCode}")
   }
 

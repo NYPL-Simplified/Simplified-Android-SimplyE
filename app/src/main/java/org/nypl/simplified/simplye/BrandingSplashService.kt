@@ -7,10 +7,9 @@ import org.nypl.simplified.ui.branding.BrandingSplashServiceType
  */
 
 class BrandingSplashService : BrandingSplashServiceType {
-  override fun splashImageResource(): Int {
-    return R.drawable.simplified_splash
-  }
-  override fun splashImageTitleResource(): Int {
-    return R.drawable.simplified_splash_title
-  }
+  override val shouldShowLibrarySelectionScreen: Boolean = true
+  override fun splashImageResource(): Int =
+    R.drawable.simplified_splash
+  override fun splashImageTitleResource(): Int =
+    R.drawable.simplified_splash_title
 }

@@ -63,7 +63,6 @@ android {
 dependencies {
   implementation libraries.firebaseAnalytics
   implementation libraries.firebaseCrashlytics
-  implementation libraries.instabug
   implementation libraries.nyplDRMAdobeProvider
   implementation libraries.nyplDRMCore
   implementation libraries.nyplFindaway

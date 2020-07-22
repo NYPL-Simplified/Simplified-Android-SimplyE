@@ -1,11 +1,9 @@
-def versionValues() {
+def versionValue() {
   def propsFile = file("version.properties")
   def Properties props = new Properties()
-  def name
   def code
   if (propsFile.canRead()) {
     props.load(new FileInputStream(propsFile))
-    name = props["versionName"]
     code = props["versionCode"].toInteger()
   } else {
     throw new FileNotFoundException("Could not read version.properties!")
@@ -15,12 +13,10 @@ def versionValues() {
   props.save(new FileOutputStream(propsFile), "")
 
   logger.info("incrementing build version ${code} -> ${code + 1}")
-  return new Tuple(name, code)
+  return code
 }
 
 android {
-  def version = versionValues()
-
   packagingOptions {
     exclude "META-INF/LICENSE"
 
@@ -54,9 +50,9 @@ android {
   }
 
   defaultConfig {
-    versionName = version.get(0)
-    versionCode = version.get(1)
-    setProperty("archivesBaseName", "simplye-${versionName}-${versionCode}")
+    versionCode = versionValue()
+    versionName = version
+    setProperty("archivesBaseName", "simplye-${version}-${versionCode}")
   }
 
   lintOptions {
@@ -65,16 +61,17 @@ android {
 }
 
 dependencies {
+  implementation libraries.firebaseAnalytics
+  implementation libraries.firebaseCrashlytics
+  implementation libraries.instabug
   implementation libraries.nyplDRMAdobeProvider
   implementation libraries.nyplDRMCore
   implementation libraries.nyplFindaway
   implementation libraries.simplifiedAccountSourceNYPLRegistry
   implementation libraries.simplifiedAnalyticsCirculation
+  implementation libraries.simplifiedAudioBooksOverdrive
   implementation libraries.simplifiedMain
   implementation libraries.simplifiedMigrationFrom3Master
-  implementation libraries.instabug
-  implementation libraries.firebaseAnalytics
-  implementation libraries.firebaseCrashlytics
 
   annotationProcessor libraries.googleAutoValue
 }

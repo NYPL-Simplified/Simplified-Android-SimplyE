@@ -21,6 +21,7 @@ class SimplyEAccountFallback : AccountProviderFallbackType {
       authentication = AccountProviderAuthenticationDescription.COPPAAgeGate(
       greaterEqual13 = URI.create("https://circulation.librarysimplified.org/CLASSICS/groups/1831"),
       under13 = URI.create("https://circulation.librarysimplified.org/CLASSICS/groups/1832")),
+      authenticationAlternatives = listOf(),
       cardCreatorURI = null,
       catalogURI = URI.create("https://circulation.librarysimplified.org/CLASSICS/groups/1832"),
       displayName = "The SimplyE Collection",
@@ -37,8 +38,6 @@ class SimplyEAccountFallback : AccountProviderFallbackType {
       subtitle = "A selection of classics and modern material available to anyone, with no library card necessary.",
       supportEmail = "mailto:gethelp+simplye-collection@nypl.org",
       supportsReservations = false,
-      updated = DateTime.parse("2019-07-08T16:32:52+00:00"),
-      authenticationAlternatives = emptyList())
+      updated = DateTime.parse("2019-07-08T16:32:52+00:00"))
   }
-
 }

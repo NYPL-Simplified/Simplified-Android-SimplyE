@@ -40,5 +40,4 @@ class SimplyEAccountFallback : AccountProviderFallbackType {
       supportsReservations = false,
       updated = DateTime.parse("2019-07-08T16:32:52+00:00"))
   }
-
 }

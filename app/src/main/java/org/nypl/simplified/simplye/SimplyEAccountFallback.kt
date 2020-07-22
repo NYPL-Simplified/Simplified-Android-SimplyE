@@ -38,8 +38,6 @@ class SimplyEAccountFallback : AccountProviderFallbackType {
       subtitle = "A selection of classics and modern material available to anyone, with no library card necessary.",
       supportEmail = "mailto:gethelp+simplye-collection@nypl.org",
       supportsReservations = false,
-      updated = DateTime.parse("2019-07-08T16:32:52+00:00"),
-      authenticationAlternatives = emptyList())
+      updated = DateTime.parse("2019-07-08T16:32:52+00:00"))
   }
-
 }

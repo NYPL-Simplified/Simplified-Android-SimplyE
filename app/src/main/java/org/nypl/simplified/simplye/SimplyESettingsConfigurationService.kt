@@ -7,7 +7,6 @@ import org.nypl.simplified.ui.settings.SettingsConfigurationServiceType
  */
 
 class SimplyESettingsConfigurationService : SettingsConfigurationServiceType {
-  override val allowAccountsRegistryAccess = true
   override val allowAccountsAccess: Boolean
     get() = true
 

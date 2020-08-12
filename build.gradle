@@ -49,7 +49,6 @@ ext {
 
   nyplFindawayVersion = "5.0.0"
   simplifiedVersion = "6.1.0-SNAPSHOT"
-  firebaseVersion = "17.2.2"
 }
 
 subprojects {
@@ -64,7 +63,7 @@ subprojects {
 }
 
 ext.libraries = [
-  firebaseAnalytics                  : "com.google.firebase:firebase-analytics:${firebaseVersion}",
+  firebaseAnalytics                  : "com.google.firebase:firebase-analytics:17.4.4",
   firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.1.1",
   googleAutoValue                    : "com.google.auto.value:auto-value:1.5",
   nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.27",

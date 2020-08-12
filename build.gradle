@@ -20,7 +20,7 @@ buildscript {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath 'com.android.tools.build:gradle:3.6.3'
     classpath 'com.google.gms:google-services:4.3.3'
-    classpath 'com.google.firebase:firebase-crashlytics-gradle:2.0.0-beta04'
+    classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.0'
   }
 }
 
@@ -65,7 +65,7 @@ subprojects {
 
 ext.libraries = [
   firebaseAnalytics                  : "com.google.firebase:firebase-analytics:${firebaseVersion}",
-  firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.0.0-beta04",
+  firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.1.1",
   googleAutoValue                    : "com.google.auto.value:auto-value:1.5",
   nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.27",
   nyplDRMCore                        : "org.librarysimplified.drm:org.librarysimplified.drm.core:1.1.2",

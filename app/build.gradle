@@ -69,6 +69,7 @@ dependencies {
   implementation libraries.simplifiedAccountSourceNYPLRegistry
   implementation libraries.simplifiedAnalyticsCirculation
   implementation libraries.simplifiedAudioBooksOverdrive
+  implementation libraries.simplifiedCrashlytics
   implementation libraries.simplifiedMain
   implementation libraries.simplifiedMigrationFrom3Master
 

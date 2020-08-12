@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
   package="org.nypl.simplified.simplye">
 
   <uses-permission android:name="android.permission.INTERNET" />
@@ -15,7 +16,8 @@
     android:icon="@mipmap/simplye_launcher"
     android:label="@string/appName"
     android:theme="@style/SimplifiedTheme_NoActionBar_Red"
-    android:usesCleartextTraffic="true">
+    android:usesCleartextTraffic="true"
+    tools:replace="android:allowBackup">
 
     <!-- Main entry point for the application. -->
     <activity

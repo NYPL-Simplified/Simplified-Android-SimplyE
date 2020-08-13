@@ -29,6 +29,8 @@
     <appender-ref ref="FILE" />
   </appender>
 
+  <appender name="CRASHLYTICS" class="org.nypl.simplified.crashlytics.api.CrashlyticsLoggingAppender" />
+
   <logger
     name="org.nypl.simplified.app.catalog.CatalogFeedBookCellView"
     level="INFO" />
@@ -48,6 +50,7 @@
   <root level="DEBUG">
     <appender-ref ref="LOG_CAT" />
     <appender-ref ref="ASYNC_FILE" />
+    <appender-ref ref="CRASHLYTICS" />
   </root>
 
 </configuration>

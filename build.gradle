@@ -20,7 +20,7 @@ buildscript {
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath 'com.android.tools.build:gradle:3.6.3'
     classpath 'com.google.gms:google-services:4.3.3'
-    classpath 'com.google.firebase:firebase-crashlytics-gradle:2.0.0-beta04'
+    classpath 'com.google.firebase:firebase-crashlytics-gradle:2.2.0'
   }
 }
 
@@ -48,8 +48,7 @@ ext {
   }
 
   nyplFindawayVersion = "5.0.0"
-  simplifiedVersion = "6.0.0"
-  firebaseVersion = "17.2.2"
+  simplifiedVersion = "6.1.0-SNAPSHOT"
 }
 
 subprojects {
@@ -64,17 +63,18 @@ subprojects {
 }
 
 ext.libraries = [
-  firebaseAnalytics                  : "com.google.firebase:firebase-analytics:${firebaseVersion}",
-  firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.0.0-beta04",
+  firebaseAnalytics                  : "com.google.firebase:firebase-analytics:17.4.4",
+  firebaseCrashlytics                : "com.google.firebase:firebase-crashlytics:17.1.1",
   googleAutoValue                    : "com.google.auto.value:auto-value:1.5",
   nyplDRMAdobeProvider               : "org.librarysimplified.drm.adobe:org.librarysimplified.drm.adobe.provider:1.1.27",
   nyplDRMCore                        : "org.librarysimplified.drm:org.librarysimplified.drm.core:1.1.2",
   nyplFindaway                       : "org.librarysimplified.audiobook.audioengine:org.librarysimplified.audiobook.audioengine.core:${nyplFindawayVersion}",
   simplifiedAccountSourceNYPLRegistry: "org.librarysimplified:org.librarysimplified.accounts.source.nyplregistry:${simplifiedVersion}",
   simplifiedAnalyticsCirculation     : "org.librarysimplified:org.librarysimplified.analytics.circulation:${simplifiedVersion}",
+  simplifiedAudioBooksOverdrive      : "org.librarysimplified.audiobook.overdrive:org.librarysimplified.audiobook.overdrive.main:1.0.0",
+  simplifiedCrashlytics              : "org.librarysimplified:org.librarysimplified.crashlytics:${simplifiedVersion}",
   simplifiedMain                     : "org.librarysimplified:org.librarysimplified.main:${simplifiedVersion}",
   simplifiedMigrationFrom3Master     : "org.librarysimplified:org.librarysimplified.migration.from3master:${simplifiedVersion}",
-  simplifiedAudioBooksOverdrive      : "org.librarysimplified.audiobook.overdrive:org.librarysimplified.audiobook.overdrive.main:1.0.0",
   slf4j                              : "org.slf4j:slf4j-api:1.7.25",
 ]
 

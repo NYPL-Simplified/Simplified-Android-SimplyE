@@ -48,7 +48,7 @@ ext {
   }
 
   nyplFindawayVersion = "5.0.0"
-  simplifiedVersion = "6.1.0-SNAPSHOT"
+  simplifiedVersion = "6.2.0-SNAPSHOT"
 }
 
 subprojects {

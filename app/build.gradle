@@ -1,24 +1,6 @@
-def versionValue() {
-  def propsFile = file("version.properties")
-  def Properties props = new Properties()
-  def code
-  if (propsFile.canRead()) {
-    props.load(new FileInputStream(propsFile))
-    code = props["versionCode"].toInteger()
-  } else {
-    throw new FileNotFoundException("Could not read version.properties!")
-  }
-
-  props["versionCode"] = (code + 1).toString()
-  props.save(new FileOutputStream(propsFile), "")
-
-  logger.info("incrementing build version ${code} -> ${code + 1}")
-  return code
-}
-
 android {
   defaultConfig {
-    versionCode = versionValue()
+    versionCode = versionCode(version)
     versionName = version
     setProperty("archivesBaseName", "simplye-${version}-${versionCode}")
   }

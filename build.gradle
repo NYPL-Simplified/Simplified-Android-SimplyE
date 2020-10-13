@@ -49,7 +49,7 @@ ext {
 
   nyplOverdriveVersion = "1.0.1"
   nyplFindawayVersion = "6.0.0"
-  simplifiedVersion = "6.3.0-SNAPSHOT"
+  simplifiedVersion = "6.3.0"
 }
 
 subprojects {

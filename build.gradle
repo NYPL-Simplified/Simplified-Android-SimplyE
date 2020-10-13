@@ -102,7 +102,7 @@ task preFlightChecks {
     "app/src/main/assets/cardcreator.conf",
     "app/src/main/assets/overdrive.json",
     "app/src/main/assets/ReaderClientCert.sig",
-    "app/src/main/resources/org/nypl/simplified/simplye/feedbooks.conf",
+    "app/src/main/assets/feedbooks.conf",
   ]
 
   def missingFiles = []

@@ -23,6 +23,7 @@ cardcreator.conf
 google-services.json
 overdrive.json
 ReaderClientCert.sig
+feedbooks.conf
 
 # backup files
 *~

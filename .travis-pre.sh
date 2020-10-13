@@ -73,7 +73,7 @@ cp -v ".travis/credentials/APK Signing/nypl-keystore.jks" \
 info "installing feedbooks.conf"
 
 cp -v ".travis/credentials/Feedbooks/feedbooks.conf" \
-  app/src/main/resources/org/nypl/simplified/simplye/feedbooks.conf || exit 1
+  app/src/main/assets/feedbooks.conf || exit 1
 
 info "installing overdrive.conf"
 

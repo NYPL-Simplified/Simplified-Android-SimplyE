@@ -37,6 +37,10 @@ platform :android do
          groups: "librarysimplified",
          release_notes: "#{release_notes}",
          firebase_cli_path: ENV["FIREBASE_CLI_PATH"])
+
+     message = "SimplyE version 5.0.10 now available for QA. Work in this release: #{release_notes}"
+     slack_url = "https://hooks.slack.com/services/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"
+     slack(message: message, slack_url: slack_url, success: true)
     end
 
      # This needs to be tested as the .aab files have dynamic naming

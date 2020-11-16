@@ -63,11 +63,10 @@ cp -v ".ci/credentials/Overdrive/audiobook_fulfillment.json" \
 # Add the NYPL nexus properties to the project properties.
 #
 
-cat gradle.properties > gradle.properties.tmp <<EOF
+mkdir -p "${HOME}/.gradle" ||
+  fatal "could not create ${HOME}/.gradle"
 
+cat > "${HOME}/.gradle/gradle.properties" << EOF
 org.librarysimplified.nexus.username=${NYPL_NEXUS_USER}
 org.librarysimplified.nexus.password=${NYPL_NEXUS_PASSWORD}
 EOF
-
-mv gradle.properties.tmp gradle.properties ||
-  fatal "could not rename gradle.properties.tmp"

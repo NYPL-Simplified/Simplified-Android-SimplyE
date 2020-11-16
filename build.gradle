@@ -38,13 +38,20 @@ ext {
   androidMinimumSDKVersion = 21
   androidTargetSDKVersion = 29
 
-  if (!project.hasProperty("nexusUsername")) {
-    logger.warn("No nexusUsername property specified: Using an empty value")
-    nexusUsername = ""
+  if (!project.hasProperty("org.librarysimplified.nexus.username")) {
+    throw new IllegalArgumentException(
+      "Missing project property: org.librarysimplified.nexus.username")
+  } else {
+    nyplNexusUsername = project.property("org.librarysimplified.nexus.username")
+    assert (nyplNexusUsername != null)
   }
-  if (!project.hasProperty("nexusPassword")) {
-    logger.warn("No nexusPassword property specified: Using an empty value")
-    nexusPassword = ""
+
+  if (!project.hasProperty("org.librarysimplified.nexus.password")) {
+    throw new IllegalArgumentException(
+      "Missing project property: org.librarysimplified.nexus.password")
+  } else {
+    nyplNexusPassword = project.property("org.librarysimplified.nexus.password")
+    assert (nyplNexusPassword != null)
   }
 
   if (project.hasProperty("org.librarysimplified.no_signing")) {
@@ -312,19 +319,6 @@ Automatic-Module-Name: ${POM_AUTOMATIC_MODULE_NAME}
               url = "https://github.com/MalcolmMcFly"
             }
           }
-        }
-      }
-    }
-
-    repositories {
-      maven {
-        def releasesRepoUrl = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-        def snapshotsRepoUrl = "https://oss.sonatype.org/content/repositories/snapshots/"
-        url = version.endsWith("SNAPSHOT") ? snapshotsRepoUrl : releasesRepoUrl
-
-        credentials(PasswordCredentials) {
-          username nexusUsername
-          password nexusPassword
         }
       }
     }

@@ -27,4 +27,4 @@ feedbooks.conf
 
 # backup files
 *~
-
+version.properties

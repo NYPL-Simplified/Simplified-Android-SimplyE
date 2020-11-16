@@ -25,6 +25,16 @@ then
   fatal "NYPL_NEXUS_PASSWORD is not defined"
 fi
 
+if [ -z "${NYPL_SIGNING_KEY_PASSWORD}" ]
+then
+  fatal "NYPL_SIGNING_KEY_PASSWORD is not defined"
+fi
+
+if [ -z "${NYPL_SIGNING_STORE_PASSWORD}" ]
+then
+  fatal "NYPL_SIGNING_STORE_PASSWORD is not defined"
+fi
+
 #------------------------------------------------------------------------
 # Copy credentials into place.
 #

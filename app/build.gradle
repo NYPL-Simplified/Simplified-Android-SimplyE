@@ -17,10 +17,10 @@ android {
 
   signingConfigs {
     release {
-      keyAlias findProperty("org.librarysimplified.simplye.keyAlias")
-      keyPassword findProperty("org.librarysimplified.simplye.keyPassword")
+      keyAlias nyplSigningKeyAlias
+      keyPassword nyplSigningKeyPassword
       storeFile file("keystore.jks")
-      storePassword findProperty("org.librarysimplified.simplye.storePassword")
+      storePassword nyplSigningStorePassword
     }
   }
 

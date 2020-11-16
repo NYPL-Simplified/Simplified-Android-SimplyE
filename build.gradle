@@ -54,6 +54,38 @@ ext {
     assert (nyplNexusPassword != null)
   }
 
+  if (!project.hasProperty("org.librarysimplified.simplye.keyPassword")) {
+    throw new IllegalArgumentException(
+      "Missing project property: org.librarysimplified.simplye.keyPassword")
+  } else {
+    nyplSigningKeyPassword = project.property("org.librarysimplified.simplye.keyPassword")
+    assert (nyplSigningKeyPassword != null)
+  }
+
+  if (!project.hasProperty("org.librarysimplified.simplye.storePassword")) {
+    throw new IllegalArgumentException(
+      "Missing project property: org.librarysimplified.simplye.storePassword")
+  } else {
+    nyplSigningStorePassword = project.property("org.librarysimplified.simplye.storePassword")
+    assert (nyplSigningStorePassword != null)
+  }
+
+  if (!project.hasProperty("org.librarysimplified.simplye.keyAlias")) {
+    throw new IllegalArgumentException(
+      "Missing project property: org.librarysimplified.simplye.keyAlias")
+  } else {
+    nyplSigningKeyAlias = project.property("org.librarysimplified.simplye.keyAlias")
+    assert (nyplSigningKeyAlias != null)
+  }
+
+  if (!project.hasProperty("org.librarysimplified.nexus.password")) {
+    throw new IllegalArgumentException(
+      "Missing project property: org.librarysimplified.nexus.password")
+  } else {
+    nyplNexusPassword = project.property("org.librarysimplified.nexus.password")
+    assert (nyplNexusPassword != null)
+  }
+
   if (project.hasProperty("org.librarysimplified.no_signing")) {
     disableSigning = true
     logger.warn("org.librarysimplified.no_signing is set: We will not sign artifacts")

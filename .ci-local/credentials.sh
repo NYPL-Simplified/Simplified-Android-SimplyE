@@ -69,4 +69,7 @@ mkdir -p "${HOME}/.gradle" ||
 cat > "${HOME}/.gradle/gradle.properties" << EOF
 org.librarysimplified.nexus.username=${NYPL_NEXUS_USER}
 org.librarysimplified.nexus.password=${NYPL_NEXUS_PASSWORD}
+org.librarysimplified.simplye.keyAlias=nypl
+org.librarysimplified.simplye.keyPassword=${NYPL_SIGNING_KEY_PASSWORD}
+org.librarysimplified.simplye.storePassword=${NYPL_SIGNING_STORE_PASSWORD}
 EOF

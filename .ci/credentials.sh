@@ -81,3 +81,9 @@ then
   Expected: ${BROOKLIME_SHA256_EXPECTED}
   Received: ${BROOKLIME_SHA256_RECEIVED}"
 fi
+
+#------------------------------------------------------------------------
+# Run local credentials script.
+#
+
+.ci/credentials-local.sh

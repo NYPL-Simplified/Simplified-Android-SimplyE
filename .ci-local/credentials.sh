@@ -59,6 +59,10 @@ info "installing overdrive.conf"
 cp -v ".ci/credentials/Overdrive/audiobook_fulfillment.json" \
   "app/src/main/assets/overdrive.json" || exit 1
 
+#
+# Add the NYPL nexus properties to the project properties.
+#
+
 cat gradle.properties > gradle.properties.tmp <<EOF
 
 org.librarysimplified.nexus.username=${NYPL_NEXUS_USER}

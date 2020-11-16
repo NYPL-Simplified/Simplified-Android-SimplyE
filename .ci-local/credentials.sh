@@ -25,16 +25,6 @@ then
   fatal "NYPL_NEXUS_PASSWORD is not defined"
 fi
 
-if [ -z "${NYPL_SIGNING_KEY_PASSWORD}" ]
-then
-  fatal "NYPL_SIGNING_KEY_PASSWORD is not defined"
-fi
-
-if [ -z "${NYPL_SIGNING_STORE_PASSWORD}" ]
-then
-  fatal "NYPL_SIGNING_STORE_PASSWORD is not defined"
-fi
-
 #------------------------------------------------------------------------
 # Copy credentials into place.
 #
@@ -76,10 +66,10 @@ cp -v ".ci/credentials/Overdrive/audiobook_fulfillment.json" \
 mkdir -p "${HOME}/.gradle" ||
   fatal "could not create ${HOME}/.gradle"
 
-cat > "${HOME}/.gradle/gradle.properties" << EOF
+cat >> "${HOME}/.gradle/gradle.properties" << EOF
 org.librarysimplified.nexus.username=${NYPL_NEXUS_USER}
 org.librarysimplified.nexus.password=${NYPL_NEXUS_PASSWORD}
-org.librarysimplified.simplye.keyAlias=nypl
-org.librarysimplified.simplye.keyPassword=${NYPL_SIGNING_KEY_PASSWORD}
-org.librarysimplified.simplye.storePassword=${NYPL_SIGNING_STORE_PASSWORD}
 EOF
+
+cat ".ci/credentials/APK\ Signing/nypl-keystore.properties" >> "${HOME}/.gradle/gradle.properties" ||
+  fatal "could not read keystore properties"

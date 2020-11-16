@@ -71,5 +71,5 @@ org.librarysimplified.nexus.username=${NYPL_NEXUS_USER}
 org.librarysimplified.nexus.password=${NYPL_NEXUS_PASSWORD}
 EOF
 
-cat ".ci/credentials/APK\ Signing/nypl-keystore.properties" >> "${HOME}/.gradle/gradle.properties" ||
+cat ".ci/credentials/APK Signing/nypl-keystore.properties" >> "${HOME}/.gradle/gradle.properties" ||
   fatal "could not read keystore properties"

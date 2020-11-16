@@ -15,6 +15,16 @@ info()
   echo "credentials-local.sh: info: $1" 1>&2
 }
 
+if [ -z "${NYPL_NEXUS_USER}" ]
+then
+  fatal "NYPL_NEXUS_USER is not defined"
+fi
+
+if [ -z "${NYPL_NEXUS_PASSWORD}" ]
+then
+  fatal "NYPL_NEXUS_PASSWORD is not defined"
+fi
+
 #------------------------------------------------------------------------
 # Copy credentials into place.
 #
@@ -48,3 +58,12 @@ info "installing overdrive.conf"
 
 cp -v ".ci/credentials/Overdrive/audiobook_fulfillment.json" \
   "app/src/main/assets/overdrive.json" || exit 1
+
+cat gradle.properties > gradle.properties.tmp <<EOF
+
+org.librarysimplified.nexus.username=${NYPL_NEXUS_USER}
+org.librarysimplified.nexus.password=${NYPL_NEXUS_PASSWORD}
+EOF
+
+mv gradle.properties.tmp gradle.properties ||
+  fatal "could not rename gradle.properties.tmp"

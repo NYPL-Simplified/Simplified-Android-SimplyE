@@ -1,6 +1,8 @@
 SimplyE
 ===
 
+[![Build Status](https://img.shields.io/github/workflow/status/NYPL-Simplified/Simplified-Android-SimplyE/Android%20CI%20(Authenticated)?style=flat-square)](https://github.com/NYPL-Simplified/Simplified-Android-SimplyE/actions?query=workflow%3A%22Android+CI+%28Authenticated%29%22)
+
 The NYPL's [SimplyE](https://www.nypl.org/books-music-movies/ebookcentral/simplye) Android application.
 
 ### What Is This?

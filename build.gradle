@@ -94,7 +94,7 @@ ext {
     logger.warn("org.librarysimplified.no_signing is not set: We will attempt to sign artifacts")
   }
 
-  nyplOverdriveVersion = "1.0.1"
+  nyplOverdriveVersion = "1.0.3"
   nyplFindawayVersion = "6.0.0"
   simplifiedVersion = "6.4.0-SNAPSHOT"
 }

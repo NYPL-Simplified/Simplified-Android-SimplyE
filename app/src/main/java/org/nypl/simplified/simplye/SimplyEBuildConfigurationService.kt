@@ -11,6 +11,8 @@ class SimplyEBuildConfigurationService : BuildConfigurationServiceType {
         get() = true
     override val oauthCallbackScheme: BuildConfigOAuthScheme
         get() = BuildConfigOAuthScheme("simplye-oauth")
+    override val showChangeAccountsUi: Boolean
+        get() = true
     override val showDebugBookDetailStatus: Boolean
         get() = false
     override val showHoldsTab: Boolean

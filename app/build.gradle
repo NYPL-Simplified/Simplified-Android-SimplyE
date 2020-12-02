@@ -1,10 +1,8 @@
-import java.util.Properties
-
 android {
   defaultConfig {
-    versionCode = versionCode(version)
-    versionName = version
-    setProperty("archivesBaseName", "simplye-${version}-${versionCode}")
+    versionName = project.version
+    versionCode = versionCode(project.version)
+    setProperty("archivesBaseName", "simplye-${versionName}")
   }
 
   packagingOptions {

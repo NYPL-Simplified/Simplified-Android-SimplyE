@@ -13,7 +13,7 @@
     android:name="org.nypl.simplified.main.MainApplication"
     android:allowBackup="true"
     android:contentDescription="@string/appName"
-    android:icon="@mipmap/simplye_launcher"
+    android:icon="@mipmap/ic_launcher"
     android:label="@string/appName"
     android:theme="@style/SimplifiedTheme_NoActionBar_Red"
     android:usesCleartextTraffic="true"
